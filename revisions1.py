@@ -18,9 +18,9 @@ print(newvalues1)
 my_tuple = (1,2,3,4,5)
 print(list(my_tuple))
 
-# s = "SIMPLILEARN"
-# for i in s:
-#     print(i, end="")
+s = "SIMPLILEARN"
+for i in s:
+    print(i, end="")
 
 list2 = ['ctrl', 'John', "David"]
 for i in range(len(list2)):
