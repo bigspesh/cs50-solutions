@@ -125,3 +125,39 @@ courses = {f'course{i}': input(f'Course{i}: ') for i in range(1, course_count + 
 
 # Populate the table with course names
 
+# a funny code i wrot, you get 0 irespective of 
+# the floating point number you enter 
+
+def get():
+    user_input = float(input())
+    round = user_input // 1
+    solve = user_input - round
+    mult = solve * 100
+    denom = [25, 9.999999999999972, 5.000000000000057, 0.9999999999999858]
+    while mult >= denom[0]:
+        mult -= denom[0] # decremnting 
+    if mult == 0.0:
+        print(mult)
+    elif mult != 0.0:
+        mult = mult - mult
+    while mult >= denom[1]:
+        mult = mult - denom[1]
+        if mult == 0.0:
+            print(mult)
+        elif mult != 0.0:
+            mult = mult - mult
+    while mult >= denom[2]:
+        mult = mult - denom[2]
+    if mult == 0.0:
+        print(mult)
+    elif mult != 0.0:
+        mult = mult - mult         
+    while mult >= denom[3]:
+        mult = mult - denom[3]
+    if mult == 0.0:
+        print(mult)
+    elif mult != 0.0:
+        mult = mult - mult       
+    return mult , denom
+
+mult , denom = get()
