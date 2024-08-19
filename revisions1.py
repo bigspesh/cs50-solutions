@@ -79,3 +79,22 @@ def study_count():
 
 table, class_count = study_count()
 
+
+
+class_times = [
+    'Enter the time interval for the first study period (e.g., 00:00AM/PM - 00:00AM/PM):',
+    'Enter the time interval for the second study period (e.g., 00:00AM/PM - 00:00AM/PM):',
+    'Enter the time interval for the third study period (e.g., 00:00AM/PM - 00:00AM/PM):',
+    'Enter the time interval for the fourth study period (e.g., 00:00AM/PM - 00:00AM/PM):',
+]
+
+# To store the time intervals that have been used
+used_intervals = set()
+
+# Populate the first row with time intervals
+# also while there is no unpacking going on here, we are using the each entry in the used intervals to set the text in the cell
+# which is happening at runtime
+
+for col in range(len(class_times)):
+    if col < class_count:
+        table.cell(0, col).text = get_validated_time(class_times[col], used_intervals)
