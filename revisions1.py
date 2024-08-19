@@ -48,3 +48,34 @@ text = input()
 for i in text.split():
     print(i)
 
+rom classautomation import get_validated_time
+from docx import Document
+
+document = Document()
+
+
+def study_count():
+    while True:
+        try:
+            class_count = int(input('Enter number of study periods in a day (3 or 4): '))
+            if class_count == 4:
+                table = document.add_table(5, 4)
+                return table, class_count
+            elif class_count == 3:
+                table = document.add_table(5, 3)
+                return table, class_count
+            else:
+                print('Study period should be 3 or 4.')
+        except ValueError:
+            print('Invalid input. Enter 3 or 4.')
+
+# to unpack because calling the study_count() dunction alone returns a tuple in this form
+# (<docx.table.Table object at 0x0000024CCC221AE0>, 4) and so table = <docx.table.Table object at 0x0000024CCC221AE0>
+# which will then be used by then be used by the document app 
+# and class_count = 4
+# the essence of this is to assign values to our variables so you can reuse them anywhere within the code space
+# eg print(f" the class count is : {class_count}")
+# >> the class count is 4
+
+table, class_count = study_count()
+
