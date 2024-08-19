@@ -137,27 +137,29 @@ def get():
     while mult >= denom[0]:
         mult -= denom[0] # decremnting 
     if mult == 0.0:
-        print(mult)
+        return mult , denom
     elif mult != 0.0:
         mult = mult - mult
     while mult >= denom[1]:
         mult = mult - denom[1]
-        if mult == 0.0:
-            print(mult)
-        elif mult != 0.0:
-            mult = mult - mult
+    if mult == 0.0:
+        return mult , denom
+    elif mult != 0.0:
+        mult = mult - mult
     while mult >= denom[2]:
         mult = mult - denom[2]
     if mult == 0.0:
-        print(mult)
+        return mult , denom
     elif mult != 0.0:
         mult = mult - mult         
     while mult >= denom[3]:
         mult = mult - denom[3]
     if mult == 0.0:
-        print(mult)
+        return mult, denom
     elif mult != 0.0:
         mult = mult - mult       
     return mult , denom
 
 mult , denom = get()
+print(mult)
+
