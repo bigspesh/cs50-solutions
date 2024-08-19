@@ -98,3 +98,30 @@ used_intervals = set()
 for col in range(len(class_times)):
     if col < class_count:
         table.cell(0, col).text = get_validated_time(class_times[col], used_intervals)
+
+# Prompt for the number of courses
+def course_count_prompt():
+    while True:
+        try:
+            course_count = int(input("Enter the number of courses you want to study (5-12): "))
+            if 5 <= course_count <= 12:
+                return course_count
+            else:
+                print("Course count should be between 5 and 12.")
+        except ValueError:
+            print("Invalid input. Enter a number between 5 and 12.")
+
+# in this case an unpacking is also going on here, but this time the course_count_prompt() function is not 
+# returning a tuple but rather returning the user_input which is course_count, then after you assign it to the variable course_count again
+# like we did earlier in the table, class_count = study_count(), so we can reuse the value of course_count outside of this function
+# eg print(f"the number of courses you'll study is {course_count})
+# >> the number of courses you'll study is 12, that's if the user enter 12
+# NOTE: if you dont assign the the course_count_prompt() function to the course_count variable, you ca use the course_count value outside of
+# that fucnction, because he sole purpose of the function is to take the user_input and then return he value which you can then store inside
+# of a variable 
+course_count = course_count_prompt()
+
+courses = {f'course{i}': input(f'Course{i}: ') for i in range(1, course_count + 1)}
+
+# Populate the table with course names
+
