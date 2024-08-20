@@ -153,3 +153,24 @@ def get():
 mult, denom, i = get()
 print(get())
 
+# now i used a for loop, making it shorter
+
+def get():
+    while True:
+        try:
+            user_input = float(input("Enter your change: "))
+            return user_input
+        except ValueError:
+            pass    
+user_input = get()
+
+         
+coins_denom = [0.25, 0.10, 0.05, 0.01]
+i = 0
+for coins in coins_denom:
+    for cents in coins_denom:
+        while user_input >= cents:
+            user_input -= cents
+            i = i + 1
+
+print(i)

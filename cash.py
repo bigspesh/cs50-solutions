@@ -1,5 +1,5 @@
 denom = [ 0.25, 0.10, 0.05, 0.01]
-userinput  = int("ENTER CHANGE:")
+userinput  = get_float("ENTER CHANGE:")
 for i in denom:
    if denom[]
 
