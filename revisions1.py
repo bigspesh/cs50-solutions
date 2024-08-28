@@ -111,6 +111,17 @@ def course_count_prompt():
         except ValueError:
             print("Invalid input. Enter a number between 5 and 12.")
 
+def course_count_prompt():
+    while True:
+        try:
+            course_count = int(input("Enter the number of courses you want to study (5-12): "))
+            if 5 <= course_count <= 12:
+                return course_count
+            else:
+                print("Course count should be between 5 and 12.")
+        except ValueError:
+            print("Invalid input. Enter a number between 5 and 12.")
+
 # in this case an unpacking is also going on here, but this time the course_count_prompt() function is not 
 # returning a tuple but rather returning the user_input which is course_count, then after you assign it to the variable course_count again
 # like we did earlier in the table, class_count = study_count(), so we can reuse the value of course_count outside of this function
