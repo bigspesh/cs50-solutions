@@ -152,27 +152,6 @@ def get():
         i += 1   
     return mult , denom, i  
 
-
-def get():
-    user_input = float(input())
-    round = user_input // 1
-    solve = user_input - round
-    mult = solve * 100
-    denom = [25, 9.999999999999972, 5.000000000000057, 0.9999999999999716]
-    i = 0
-    while mult >= denom[0]:
-        mult -= denom[0] # decremnting
-        i += 1
-    while mult >= denom[1]:
-        mult = mult - denom[1]
-        i += 1
-    while mult >= denom[2]:
-        mult = mult - denom[2]
-        i += 1
-    while mult >= denom[3]:
-        mult = mult - denom[3]
-        i += 1   
-    return mult , denom, i  
 mult, denom, i = get()
 print(get())
 
