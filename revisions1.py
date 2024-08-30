@@ -48,7 +48,7 @@ text = input()
 for i in text.split():
     print(i)
 
-rom classautomation import get_validated_time
+from classautomation import get_validated_time
 from docx import Document
 
 document = Document()
@@ -121,6 +121,10 @@ def course_count_prompt():
 # NOTE: if you dont assign the the course_count_prompt() function to the course_count variable, you ca use the course_count value outside of
 # that fucnction, because he sole purpose of the function is to take the user_input and then return he value which you can then store inside
 # of a variable 
+course_count = course_count_prompt()
+
+courses = {f'course{i}': input(f'Course{i}: ') for i in range(1, course_count + 1)}
+
 course_count = course_count_prompt()
 
 courses = {f'course{i}': input(f'Course{i}: ') for i in range(1, course_count + 1)}
