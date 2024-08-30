@@ -125,9 +125,7 @@ course_count = course_count_prompt()
 
 courses = {f'course{i}': input(f'Course{i}: ') for i in range(1, course_count + 1)}
 
-course_count = course_count_prompt()
 
-courses = {f'course{i}': input(f'Course{i}: ') for i in range(1, course_count + 1)}
 
 # Populate the table with course names
 
