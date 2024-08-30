@@ -180,11 +180,3 @@ for coins in coins_denom:
 print(i)
 
 
-# in this case an unpacking is also going on here, but this time the course_count_prompt() function is not 
-# returning a tuple but rather returning the user_input which is course_count, then after you assign it to the variable course_count again
-# like we did earlier in the table, class_count = study_count(), so we can reuse the value of course_count outside of this function
-# eg print(f"the number of courses you'll study is {course_count})
-# >> the number of courses you'll study is 12, that's if the user enter 12
-# NOTE: if you dont assign the the course_count_prompt() function to the course_count variable, you ca use the course_count value outside of
-# that fucnction, because he sole purpose of the function is to take the user_input and then return he value which you can then store inside
-# of a variable 
