@@ -179,6 +179,15 @@ for coins in coins_denom:
 
 print(i)
 
+coins_denom = [0.25, 0.10, 0.05, 0.01]
+i = 0
+for coins in coins_denom:
+    for cents in coins_denom:
+        while user_input >= cents:
+            user_input -= cents
+            i = i + 1
+
+print(i)
 
 
 
